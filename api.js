@@ -1,9 +1,11 @@
-import express from 'express';
-import fs from 'fs';
-import path from 'path';
 import { fileURLToPath } from 'url';
-import cors from 'cors';
 import { url } from 'inspector';
+
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const cors = require('cors');
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
