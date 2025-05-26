@@ -52,10 +52,11 @@ const constructorResultsRaw = fs.readFileSync(path.join(__dirname, 'constructorR
 const constructorResults = JSON.parse(constructorResultsRaw);
 
 const app = express();
-const PORT = 3000;
+const PORT =process.env.PORT || 3000;
 
 // Habilitar CORS para todas las rutas
 app.use(cors());
+// Middleware para parsear JSON
 app.use(express.json());
 
 // Función para guardar datos en un archivo JSON
@@ -63,6 +64,16 @@ function saveDataToFile(data, filename) {
     const filePath = path.join(__dirname, filename);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 }
+
+// Ruta de inicio
+app.get('/', (req, res) => {
+    res.send('API de F1');
+});
+
+//Ruta de home
+app.get('/home', (req, res) => {
+    res.send('Bienvenido a la API de F1');
+});
 
 // Ruta para obtener todos los circuitos
 app.get('/circuitos', (req, res) => {
@@ -1040,3 +1051,4 @@ app.post('/qualifying', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
