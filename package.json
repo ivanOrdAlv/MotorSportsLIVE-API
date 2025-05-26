@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "En esta API, se pueden ver muchas cosas de la F1, así como poder editarlas, crearlas e incluso borrarlas",
   "main": "api.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node api.js"
