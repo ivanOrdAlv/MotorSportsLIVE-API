@@ -33,8 +33,8 @@ const sprint_results = JSON.parse(sprint_resultsRaw);
 const qualifyingRaw = fs.readFileSync(path.join(__dirname, 'qualyfing.json'), 'utf8');
 const qualifying = JSON.parse(qualifyingRaw);
 
-const lap_timesRaw = fs.readFileSync(path.join(__dirname, 'laptimes.json'), 'utf8');
-const lap_times = JSON.parse(lap_timesRaw);
+//const lap_timesRaw = fs.readFileSync(path.join(__dirname, 'laptimes.json'), 'utf8');
+//const lap_times = JSON.parse(lap_timesRaw);
 
 const pitstopsRaw = fs.readFileSync(path.join(__dirname, 'pitstops.json'), 'utf8');
 const pitstops = JSON.parse(pitstopsRaw);
@@ -666,9 +666,9 @@ app.get('/qualifying', (req, res) => {
 });
 
 // Ruta para obtener todos los tiempos de carrera    
-app.get('/lap_times', (req, res) => {
-    res.json(lap_times);
-}); 
+//app.get('/lap_times', (req, res) => {
+//    res.json(lap_times);
+//}); 
 
 // Ruta para obtener todas las paradas en boxes
 app.get('/pitstops', (req, res) => {
