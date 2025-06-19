@@ -36,6 +36,27 @@ const qualifying = JSON.parse(qualifyingRaw);
 const lap_timesRaw = fs.readFileSync(path.join(__dirname, 'laptimes.json'), 'utf8');
 const lap_times = JSON.parse(lap_timesRaw);
 
+const lap_times2Raw = fs.readFileSync(path.join(__dirname, 'laptimes2.json'), 'utf8');
+const lap_times2 = JSON.parse(lap_times2Raw);
+
+const lap_times3Raw = fs.readFileSync(path.join(__dirname, 'laptimes3.json'),'utf8');
+const lap_times3 = JSON.parse(lap_times3Raw);
+
+const lap_times4Raw = fs.readFileSync(path.join(__dirname, 'laptimes4.json'),'utf8');
+const lap_times4 = JSON.parse(lap_times4Raw);
+
+const lap_times5Raw = fs.readFileSync(path.join(__dirname, 'laptimes5.json'),'utf8');
+const lap_times5 = JSON.parse(lap_times5Raw);
+
+const lap_times6Raw = fs.readFileSync(path.join(__dirname, 'laptimes6.json'),'utf8');
+const lap_times6 = JSON.parse(lap_times6Raw);
+
+const lap_times7Raw = fs.readFileSync(path.join(__dirname, 'laptimes7.json'),'utf8');
+const lap_times7 = JSON.parse(lap_times7Raw);
+
+const lap_times8Raw = fs.readFileSync(path.join(__dirname, 'laptimes8.json'),'utf8');
+const lap_times8 = JSON.parse(lap_times8Raw);
+
 const pitstopsRaw = fs.readFileSync(path.join(__dirname, 'pitstops.json'), 'utf8');
 const pitstops = JSON.parse(pitstopsRaw);
 
@@ -669,6 +690,34 @@ app.get('/qualifying', (req, res) => {
 app.get('/lap_times', (req, res) => {
     res.json(lap_times);
 }); 
+
+app.get('/lap_times2', (req, res)=>{
+    res.json(lap_times2);
+});
+
+app.get('/lap_times3', (req, res)=>{
+    res.json(lap_times3);
+});
+
+app.get('/lap_times4', (req, res)=>{
+    res.json(lap_times4);
+});
+
+app.get('/lap_times5', (req, res)=>{
+    res.json(lap_times5);
+});
+
+app.get('/lap_times6', (req, res)=>{
+    res.json(lap_times6);
+});
+
+app.get('/lap_times7', (req, res)=>{
+    res.json(lap_times7);
+});
+
+app.get('/lap_times8', (req, res)=>{
+    res.json(lap_times8);
+});
 
 // Ruta para obtener todas las paradas en boxes
 app.get('/pitstops', (req, res) => {
